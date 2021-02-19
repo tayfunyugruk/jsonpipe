@@ -1,8 +1,8 @@
 export interface Options {
   delimiter?: string;
-  success?: (data: Record<string, any>) => void;
-  error?: (errorMsg: string) => void;
-  complete?: (statusText: string) => void;
+  success?: (data: Record<string, any>, xhr: any) => void;
+  error?: (errorMsg: string, xhr: any) => void;
+  complete?: (statusText: string, xhr: any) => void;
   timeout?: number;
   method?: string;
   headers?: Record<string, string>;
