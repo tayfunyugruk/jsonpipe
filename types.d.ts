@@ -1,5 +1,6 @@
 export interface Options {
   delimiter?: string;
+  onHeaders?: (statusText: string, headers: any, xhr: any) => void;
   success?: (data: Record<string, any>, xhr: any) => void;
   error?: (errorMsg: string, xhr: any) => void;
   complete?: (statusText: string, xhr: any) => void;
